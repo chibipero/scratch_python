@@ -25,10 +25,20 @@ def woolRainbow(mc=mc, x=0, z=0, size=7, n=64):
 def clearField(mc=mc):
     mc.setBlocks(-50, 0, -50, 50, 19, 50, 0)
 
+def movePyramid(mc=mc, x, z, m):
+    a=0
+    for i in range(m):
+        setPyramid(x=a+x,z=a+z)
+        sleep(0.5)
+        setPyramid(blockTypeId=0)
+        x*=2
+        z*=2
+
+
 
 clearField()
 sleep(1)
-setPyramid(x=0, z=0, size=21, blockTypeId=41, blockData=0)
+setPyramid(x=0, z=0, size=21, blockTypeId=44, blockData=0)
 sleep(2)
 setPyramid(x=15, z=15, size=15, blockTypeId=42, blockData=0)
 sleep(2)
